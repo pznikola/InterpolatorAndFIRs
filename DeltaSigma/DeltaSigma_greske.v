@@ -30,7 +30,7 @@ always@(posedge clk or posedge reset) begin
 
     	acc2 <= acc1 + feedback + acc2;
         acc1 <= data_in + feedback + acc1;
-        data_out[3:0] = acc2[13:10];
+        data_out[3:0] <= acc2[13:10];
         
         if(acc2 > 0) begin
         	//feedback_flag = 1;
